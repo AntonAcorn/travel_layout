@@ -21,11 +21,27 @@ a {
     opacity: 1;
 
     &:visited {
-        color: darken($main_highlite, 30);    
+        color: darken($main_highlite, 10);    
     }
 
     &:hover,
     &:active {
         opacity: 0.5    
+    }
+}
+
+// main-styles
+.cover-space {
+    padding-bottom: 82%;
+    }
+
+.header {
+    position:  absolute;
+    top: 2rem;
+    width: 100%;
+    
+    &__content {
+        display: grid;
+        grid-template-columns: auto 1fr auto
     }
 }
