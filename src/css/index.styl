@@ -109,4 +109,16 @@ a {
 			&::placeholder {
 			color: white;
 			}
+
+			&:focus {
+				border: none;
+				outline: none;
+				width: 10px;
+				background: white
+
+					&::placeholder {
+						coloe: $main_dark;
+					}
+			}
+		}
 }
