@@ -16,12 +16,12 @@ body {
 }
 
 a {
-    color: $main_highlite
+    color: $main_highlite;
     transition: opacity 0.3s;
     opacity: 1;
 
     &:visited {
-        color: darken($main_highlite, 10);    
+        color: darken($main_highlite, 10%);    
     }
 
     &:hover,
@@ -261,11 +261,28 @@ a {
 	}
 }
 
+.section-cols {
+	display: flex;
+	}
+
 .section-col {
 	display: flex;
 	justify-content: space-between;
 	align-items: center
 	}
+
+.section-col__content {
+	margin: 5rem 5rem;
+	padding-left: 5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.arrow-link {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
 
 .section-col {
 	&:first-child {
@@ -317,4 +334,23 @@ a {
 	background: contain;
 	}
 
-	
+@media screen and (max-width: 1790px) {
+    html,
+    body {
+        font-size: 16px;
+    }
+
+    .section-col {
+        &:first-child {
+            width: 40%;
+        }
+
+        &:last-child {
+            width: 50%;
+        }
+    }
+
+    .content {
+        max-width: 1200px;
+    }
+}
